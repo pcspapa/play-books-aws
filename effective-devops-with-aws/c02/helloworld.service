@@ -1,0 +1,9 @@
+[Unit]
+Description=Hello world system service
+
+[Service]
+WorkingDirectory=/home/ubuntu/
+ExecStart=/usr/bin/node /home/ubuntu/helloworld.js
+
+[Install]
+WantedBy=multi-user.target
