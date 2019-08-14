@@ -44,11 +44,10 @@ t.add_resource(ec2.SecurityGroup(
 
 ud = Base64(Join('\n', [
     "#!/bin/bash",
-    "yum update -y",
-    "curl -sL https://rpm.nodesource.com/setup_12.x | bash -",
-    "yum -y install nodejs",
-    "wget http://bit.ly/2vESNuc -O /home/ec2-user/helloworld.js",
-    "wget https://raw.githubusercontent.com/pcspapa/books-Effective-DevOps-with-AWS/master/chapter02/helloworld.service -O /etc/systemd/system/helloworld.service",
+    "apt-get update",
+    "apt-get install nodejs",
+    "wget https://git.io/fj5Qk -O /home/ubuntu/helloworld.js",
+    "wget https://git.io/fj5Qm -O /etc/systemd/system/helloworld.service",
     "sudo systemctl start helloworld.service"
 ]))
 
